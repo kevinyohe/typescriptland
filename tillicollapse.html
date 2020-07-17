@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://kit.fontawesome.com/7baf727ced.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ext-modelist.js"></script>
+<script src="/static/scripts/files.js" charset="utf-8"></script>
+<script src="/static/scripts/edit.js" charset="utf-8"></script>
+<script src="https://kit.fontawesome.com/7baf727ced.js" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .collapsible {
@@ -29,6 +33,15 @@
 i {
     margin: 16px;
 }
+#editor { 
+width: 45rem;
+height: 40rem;
+background-color: lemonchiffon;
+}
+#div-with-bg
+{
+    background-image: url('path') others;
+}
 </style>
 </head>
 <body>
@@ -46,13 +59,21 @@ i {
 <button type="button" class="collapsible"><i class="fas fa-code"></i>Template</button>
 
 <div class="content">
-  <p>Edit Template: </p>
-<img src='http://unsplash.it/500/800?random' alt=''/>
+  <div>
+    Edit Template: <div id="save_message"></div>
+  </div>
+  
+  <div id="editor">what goes here</div>
 </div>
 <button type="button" class="collapsible"><i class="fas fa-download"></i>Select Data</button>
 <div class="content">
   <p>Select Data Source and Device:</p>
-  <img src='http://unsplash.it/500/800?random' alt=''/>
+  <div class="div-with-bg" style="margin: 20px;">
+  <form>
+    <label>Enter device uuid:</label>
+    <input type="text" placeholder="UUID">
+  </form>
+</div>
 </div>
 <button type="button" class="collapsible"><i class="far fa-file-alt"></i>Result</button>
 <div class="content">
